@@ -1,0 +1,33 @@
+#apk-table-container {
+	margin-top: 50px;
+}
+
+/*override the default form-control class*/
+.form-control {
+    display: inline;
+}
+
+.view-report, .view-detail{
+	cursor: pointer;
+}
+
+/* detail page css */
+#dialog-detail {
+	display: none;
+}
+
+#dialog-detail .modal-dialog {
+	width: 90%; /* desired relative width */
+	left: 5%; /* (100%-width)/2 */
+	/* place center */
+	margin-left:auto;
+	margin-right:auto; 
+}
+
+.detail-table {
+	margin-bottom: 10px;
+}
+
+table {
+	word-wrap: break-word;
+}

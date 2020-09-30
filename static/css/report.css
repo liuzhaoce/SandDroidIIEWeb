@@ -1,0 +1,86 @@
+#report-th {
+	margin-top: 20px;
+}
+
+#basic-container {
+	width: 80%;
+}
+
+.table-td-header {
+	width: 30%;
+}
+
+.table {
+	display:none;
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
+.table th {
+	border-bottom: 2px solid #6666CC !important;
+}
+
+.table tr td {
+	border-bottom: 1.5px solid #9999CC;
+	border-top: 1.5px solid #999999;
+	border-collapse: collapse;
+}
+
+.info-container {
+	margin-top: 10px;
+	max-height: 450px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.loading-img {
+	text-align: center;
+}
+
+#edit-report-btn {
+	margin-left: 20px;
+}
+
+#to-top {
+		width:100px;
+        border:1px solid #ccc;
+        background:#f7f7f7;
+        text-align:center;
+        padding:5px;
+        position:fixed; /* this is the magic */
+        bottom:10px; /* together with this to put the div at the bottom*/
+        right:10px;
+        cursor:pointer;
+        display:none;
+        color:#333;
+        font-family:verdana;
+        font-size:11px;
+}
+
+#dialog-edit {
+	display: none;
+}
+
+.classification-chart {
+	width: 45%;
+	height: 400px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.threat-icon {
+	cursor: pointer;
+}
+
+
+.download-img {
+	width:16px;
+	height:16px;
+	cursor: pointer;
+}
+
+legend {
+	color: #6600FF;
+	border-bottom: 1.5px dotted #660099;
+}

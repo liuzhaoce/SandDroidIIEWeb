@@ -1,0 +1,53 @@
+<!-- Login modal start-->
+<div class="modal fade" id="dialog-signup" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+		    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    	<span class="membership pull-right">
+					已经有账号?
+					<a id="signup-to-login" class="link" href="#" type="button">登录</a>
+				</span>
+		    	<h4 class="modal-title" id="signup-title">注册</h4>
+			</div>
+			<form id="form-signup" method="post" action="#">
+				<div class="modal-body">
+					<div class="form-group">
+						<input type="text" name="regist_code" id="form-signup-regist-code-input" 
+						class="form-control" placeholder="Registration Code"/>
+						<p class="help-block"></p>
+					</div>
+					<div class="form-group">
+						<input type="text" name="email" id="form-signup-email-input" 
+						class="form-control" placeholder="Email"/>
+						<p class="help-block"></p>
+					</div>
+					<div class="form-group">
+						<input type="text" name="username" id="form-signup-username-input" 
+						class="form-control" placeholder="Name"/>
+						<p class="help-block"></p>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" id="form-signup-password-input" 
+						class="form-control" placeholder="Password"/>
+						<p class="help-block"></p>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password_confirm" id="form-signup-password-confirm-input" 
+						class="form-control" placeholder="Password Confirm"/>
+						<p class="help-block"></p>
+					</div>
+			      	<div id="form-signup-msg"></div>
+				</div>
+			</form>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-primary has-spinner" id="form-signup-btn">
+        			<span class="spinner"><i class="icon-spin icon-spinner"></i>
+        			</span>
+        			注册
+        		</button>
+      		</div>
+    	</div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Login modal end -->

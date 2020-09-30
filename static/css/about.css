@@ -1,0 +1,28 @@
+#about {
+	margin-top: 100px;
+}
+
+#contact {
+	margin-top: 20px;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    display: inline-block;
+    float: left;
+    height: 64px;
+    margin: 5px;
+    width: 64px;
+}
+
+.icon#email {
+	background-color: #E41F11;
+    background-image: url("../images/email.png");
+}
+
+.icon#google-plus {
+	background-color: #D14836;
+    background-image: url("../images/googleplus.png");
+}
+

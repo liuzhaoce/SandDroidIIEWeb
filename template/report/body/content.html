@@ -1,0 +1,540 @@
+<div class="container well" id="threat-icon">
+	<i class="icon-envelope">
+	</i> 可能发送短信 &nbsp&nbsp		
+	<font color="red">
+		<i class="icon-envelope">
+		</i>
+	</font> 发送短信 &nbsp&nbsp
+	<i class="icon-upload-alt">
+	</i>通过网络传输数据 &nbsp&nbsp
+	<font color="red">
+		<i class="icon-random">
+		</i>
+	</font> 隐私泄漏 &nbsp&nbsp
+	<i class="icon-inbox">
+	</i> 可能重打包 &nbsp&nbsp
+	<i class="icon-repeat">
+	</i> 开机自启 &nbsp&nbsp
+	<i class="icon-signin">
+	</i> C2DM服务
+</div>
+
+<div class="container" id="report-th" data-md5={{ file_md5 }}>
+	<h4>
+		<i class="icon-th-list icon-large"> </i>
+		报告
+		{% if user_name %}
+		<button type="button" class="btn btn-success has-spinner" id="edit-report-btn">
+			<span class="spinner"><i class="icon-spin icon-spinner">
+			</i>
+			</span>
+			编辑
+        </button>
+        {% end %}
+	</h4>
+</div>
+
+<div class="container">
+	<legend> 基本信息 </legend>
+	<div class="container pull-left info-container" id="basic-container">
+		<div class="container loading-img" id="basic-loading-img">
+			<img src="../../static/images/loading.gif"/>
+		</div>
+		<table class="table table-striped" id="basic-table">
+			<tbody>
+				<tr>
+					<td class="table-td-header"> 文件MD5 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 包名 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 文件大小 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 最小SDK版本 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 目标SDK版本 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 威胁度 </td>
+				</tr>
+				<tr id="remark-tr">
+					<td class="table-td-header"> 标记 </td>
+				</tr>
+				<tr id="maltype-tr">
+					<td class="table-td-header"> 恶意代码 </td>
+				</tr>
+				<tr id="apptype-tr">
+					<td class="table-td-header"> 应用程序类别 </td>
+				</tr>
+				<tr id="threat-tr">
+					<td class="table-td-header"> 威胁种类 </td>
+				</tr>
+				<tr id="repackage-tr">
+					<td class="table-td-header"> 是否重打包 </td>
+				</tr>
+
+                                
+			</tbody>
+		</table>
+	</div>
+	{% if icon_exists %}
+		<div class="pull-right" id="icon-container">
+			<img src="../../static/reports/{{file_md5}}/icon.png" width="100">
+		</div>
+	{% end %}
+	
+</div>
+
+<div class="container" id="alias-container">
+    <legend>Alias</legend>
+	<div class="container loading-img" id="alias-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="alias-table">
+			<tbody>              
+				<tr id="antiyvir-tr">
+					<td class="table-td-header"> AntiyVir </td>
+				</tr>
+                <tr id="kaspersky-tr">
+					<td class="table-td-header"> Kaspersky </td>
+				</tr>
+                <tr id="nod32-tr">
+					<td class="table-td-header"> ESET NOD32 </td>
+				</tr>
+                <tr id="avg-tr">
+					<td class="table-td-header"> AVG </td>
+				</tr>
+                <tr id="symantec-tr">
+					<td class="table-td-header"> Symantec </td>
+				</tr>
+           </tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container" id="features-container">
+	<legend> 特征 </legend>
+	<div class="container loading-img" id="features-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="features-table">
+			<tbody>
+				<tr id="feature1-tr">
+					<td class="table-td-header"> 特征1 </td>
+				</tr>
+				<tr id="feature2-tr">
+					<td class="table-td-header"> 特征2 </td>
+				</tr>
+				<tr id="feature3-tr">
+					<td class="table-td-header"> 特征3 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container">
+	<legend> 分类 </legend>
+	<div class="container info-container">
+		<div class="container">
+			<div class="pull-left classification-chart" id="id3-chart">
+			</div>
+			<div class="pull-right classification-chart" id="bayesnet-chart">
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="pull-left classification-chart" id="decisiontable-chart">
+			</div>
+			<div class="pull-right classification-chart" id="j48-chart">
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="pull-left classification-chart" id="naivebayes-chart">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container table-container" id="certificate-container">
+	<legend> 签名信息 </legend>
+	<div class="container loading-img" id="certificate-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="certificate-table">
+			<tbody>
+				<tr>
+					<td class="table-td-header"> SHA1 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 国家 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 公司 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 地址 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 组织 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 组织单元 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 州/省 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="code-container">
+	<legend> 代码特征 </legend>
+	<div class="container loading-img" id="code-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="code-table">
+			<tbody>
+				<tr>
+					<td class="table-td-header"> 本地代码 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 动态加载 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 加解密 </td>
+				</tr>
+				<tr>
+					<td class="table-td-header"> 反射 </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</div>
+
+<div class="container table-container" id="activity-container">
+	<legend> Activities </legend>
+	<div class="container loading-img" id="activity-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="activity-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 主Activity </th>
+		            <th rowspan="1" colspan="1"> 是否导出 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="service-container">
+	<legend> Services </legend>
+	<div class="container loading-img" id="service-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="service-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 是否导出 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+
+<div class="container table-container" id="receiver-container">
+	<legend> Receivers </legend>
+	<div class="container loading-img" id="receiver-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="receiver-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 是否导出 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="provider-container">
+	<legend> Content Providers </legend>
+	<div class="container loading-img" id="provider-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="provider-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 是否导出 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container table-container" id="permission-container">
+	<legend> 权限 </legend>
+	<div class="container loading-img" id="permission-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="permission-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 威胁度 </th>
+		            <th rowspan="1" colspan="1"> 描述 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container table-container" id="ad-container">
+	<legend> 广告模块</legend>
+	<div class="container loading-img" id="ad-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="ad-table">
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container table-container" id="str-container">
+	<legend> 敏感字符串 </legend>
+	<div class="container loading-img" id="str-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="str-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 描述 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="container table-container" id="api-container">
+	<legend> 敏感API </legend>
+	<div class="container loading-img" id="api-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="api-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 名称 </th>
+		            <th rowspan="1" colspan="1"> 描述 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="url-container">
+	<legend> Urls </legend>
+	<div class="container loading-img" id="url-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="url-table">
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="started-service-container">
+	<legend> 启动的服务 </legend>
+	<div class="container loading-img" id="started-service-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="started-service-table">
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="net-container">
+	<legend> 网络操作 </legend>
+	<div class="container loading-img" id="net-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="net-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 操作类型 </th>
+		            <th rowspan="1" colspan="1"> 主机地址 </th>
+		            <th rowspan="1" colspan="1"> 端口 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="file-container">
+	<legend> 文件操作 </legend>
+	<div class="container loading-img" id="file-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="file-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 操作类型 </th>
+		            <th rowspan="1" colspan="1"> 文件路径 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="encryption-container">
+	<legend> 加解密操作 </legend>
+	<div class="container loading-img" id="encryption-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="encryption-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 密钥 </th>
+		            <th rowspan="1" colspan="1"> 算法 </th>
+		            <th rowspan="1" colspan="1"> 类型 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="dataleak-container">
+	<legend> 数据泄漏 </legend>
+	<div class="container loading-img" id="dataleak-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="dataleak-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 类型 </th>
+		            <th rowspan="1" colspan="1"> 标签 </th>
+		            <th rowspan="1" colspan="1"> 目的地址 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="call-container">
+	<legend> 拨打电话 </legend>
+	<div class="container loading-img" id="call-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="call-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 目的号码 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="container table-container" id="sms-container">
+	<legend> 发送短信 </legend>
+	<div class="container loading-img" id="sms-loading-img">
+		<img src="../../static/images/loading.gif"/>
+	</div>
+	<div class="container info-container">
+		<table class="table table-striped" id="sms-table">
+			<thead>
+		        <tr>
+		            <th rowspan="1" colspan="1"> 目的号码 </th>
+		            <th rowspan="1" colspan="1"> 短信内容 </th>
+		        </tr>
+		    </thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+{% if screenshot_exists %}
+	<div class="container" id="screenshot-container">
+		<legend> 运行截图 </legend>
+		<img src="../../static/reports/{{ file_md5 }}/screenshot.png">
+	</div>
+{% end %}
+
+<div id="to-top">^ Back to Top</div>
+
+
+

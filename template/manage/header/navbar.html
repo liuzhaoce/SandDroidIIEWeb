@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav navbar-right" id="right-nav">
+	{% if user_name %}
+		<li class="active" id="nav-user" > 
+			<a href="#"><i class="icon-android"></i> {{ user_name }}</a> 
+	    </li>
+		<li id="nav-logout" >
+			<a href="#"><i class="icon-signout"></i> 退出</a> 
+	    </li>
+	{% else %}
+		<li class="active" id="nav-login">
+			<a href="#"><i class="icon-signin"></i> 登录</a>
+		</li>
+		<li id="nav-signup" >
+			<a href="#"><i class="icon-user-md"></i> 注册</a>
+		</li>	
+	{% end %}
+</ul>

@@ -1,0 +1,33 @@
+<ul class="nav navbar-nav" id="left-nav">
+    <!-- <li class="active" id="nav-home">
+    	<a href="#home"><i class="icon-home"></i> 主页</a>
+    </li> -->
+    <li>
+    	<a href="#overview" id="nav-overview"><i class="icon-list-alt"></i> 样本库</a>
+    </li>
+    <li>
+    	<a href="#upload" id="nav-search"><i class="icon-upload-alt"></i> 上传</a>
+    </li>
+    {% if user_name %}
+	    <li>
+	    	<a href="/manage" target="_blank" id="nav-manage"><i class="icon-edit"></i> 管理</a>
+	    </li>
+    {% end %}
+</ul>
+<ul class="nav navbar-nav navbar-right" id="right-nav">
+	{% if user_name %}
+		<li class="active" id="nav-user" > 
+			<a href="#"><i class="icon-android"></i> {{ user_name }}</a> 
+	    </li>
+		<li id="nav-logout" >
+			<a href="#"><i class="icon-signout"></i> 退出</a> 
+	    </li>
+	{% else %}
+		<li class="active" id="nav-login">
+			<a href="#"><i class="icon-signin"></i> 登录</a>
+		</li>
+		<li id="nav-signup" >
+			<a href="#"><i class="icon-user-md"></i> 注册</a>
+		</li>	
+	{% end %}
+</ul>

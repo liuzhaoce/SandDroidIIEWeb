@@ -1,0 +1,35 @@
+#upload-intro p {
+	text-align: center;
+}
+
+.fileinput-button {
+    overflow: hidden;
+    position: relative;
+}
+.fileinput-button input {
+    cursor: pointer;
+    direction: ltr;
+    font-size: 200px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.fileinput-button input {
+    font-size: 100%;
+    height: 100%;
+}
+
+#upload-progress {
+	margin-top: 10px;
+}
+
+#upload-info {
+	margin-top: 20px;
+}
+
+#upload-info p {
+	font-size: 20px;
+	font-weight: bold;
+}

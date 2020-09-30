@@ -1,0 +1,65 @@
+<!-- Edit modal start-->
+<div class="modal fade" id="dialog-edit" tabindex="-1" role="dialog" aria-labelledby="Edit" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+		    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    	<h4 class="modal-title" id="login-title">编辑</h4>
+			</div>
+			<form id="form-edit" method="post" action="#">
+				<div class="modal-body">
+					<div class="form-group">
+						<input type="text" name="remark" id="form-edit-remark-input" 
+						class="form-control" placeholder="Remark"/>
+						<p class="help-block"> </p>
+					</div>
+					<div class="form-group">
+						<textarea name="feature1" id="form-edit-feature1-input" 
+						class="form-control" placeholder="Feature">
+						</textarea>
+						<p class="help-block"> </p>
+					</div>
+					<div class="form-group">
+						<textarea  name="feature2" id="form-edit-feature2-input" 
+						class="form-control" placeholder="Feature">
+						</textarea>
+						<p class="help-block"> </p>
+					</div>
+					<div class="form-group">
+						<textarea name="feature3" id="form-edit-feature3-input" 
+						class="form-control" placeholder="Feature">
+						</textarea>
+						<p class="help-block"> </p>
+					</div>
+					<div>
+						<div class="btn-group">
+		                	<button class="btn btn-default" disabled="disabled"> 恶意代码类型</button>
+		                	<select class="multiselect" id="edit-maltype" multiple="multiple">
+							</select>
+	                	</div>
+					</div>
+					<br>
+	                <div>
+	                	<div class="btn-group">
+							<button class="btn btn-default" disabled="disabled"> 应用程序类型</button>
+							<select class="multiselect" id="edit-apptype" multiple="multiple">
+							</select>
+						</div>
+	                </div>
+					
+					
+			      	<div id="form-edit-msg"> </div>
+				</div>
+			</form>
+      		<div class="modal-footer">
+        		<button type="button" class="btn btn-primary has-spinner" id="form-edit-btn">
+        			<span class="spinner"><i class="icon-spin icon-spinner">
+        			</i>
+        			</span>
+        			保存
+        		</button>
+      		</div>
+    	</div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- Edit modal end -->

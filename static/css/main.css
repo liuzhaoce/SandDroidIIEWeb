@@ -1,0 +1,64 @@
+body {
+  	padding-top: 50px;
+}
+
+.tab-content {
+	padding: 20px 15px;
+  	text-align: left;
+}
+
+#overall {
+	text-align: center;
+	margin-top: 20px;
+}
+
+#dialog-login {
+	display: none;
+}
+
+#dialog-signup {
+	display: none;
+}
+
+li.active {
+	background-color: #080808;
+    color: #FFFFFF;
+}
+
+.membership {
+	margin-right: 20px;
+	margin-top: 5px;
+}
+
+.link {
+	cursor: pointer;
+}
+
+#form-signup-msg, #form-login-msg, #form-search-msg {
+	color: #B94A48;
+}
+
+.spinner {
+	display: inline-block;
+	opacity: 0;
+	width: 0;
+	
+	-webkit-transition: opacity 0.25s, width 0.25s;
+	-moz-transition: opacity 0.25s, width 0.25s;
+	-o-transition: opacity 0.25s, width 0.25s;
+	transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unknown width elements */
+}
+
+.footer {
+	padding-bottom: 40px;
+	text-align: left;
+}	
+
+#nav-manage{
+	cursor: pointer;
+}

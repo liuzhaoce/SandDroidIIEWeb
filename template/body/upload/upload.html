@@ -1,0 +1,58 @@
+<div class="tab-pane" id="upload">
+	<div class="container" id="upload-intro">
+		<br>
+		<br>
+		<p class="lead1">
+			IIEGuard-APK行为分析系统 
+			<br>
+		</p>
+		<p class="lead">
+			支持单个APK文件以及压缩格式(zip, tar, tar.gz)的上传！ 
+			<br>
+			<b>最大文件大小：50MB!</b>
+		</p>
+	</div>
+	<!--<div class="fileupload-buttonbar">
+
+        <span class="fileinput-button"><input type="file" name="files[]" multiple></span>
+        <button type="submit" class="start">Start upload</button>
+        <button type="reset" class="cancel">Cancel upload</button>
+        <button type="button" class="delete">Delete</button>
+        <input type="checkbox" class="toggle">
+	</div>
+
+	<div class="fileupload-progress">
+	    <div class="progress">
+	        <div class="bar" style="width:0%;"></div>
+	    </div>
+    	<div class="progress-extended"></div>
+	</div>
+	<div class="files"></div>
+	<div id="upload-info">
+	</div> -->
+	<br>
+	<br>
+	<span class="btn btn-success fileinput-button">
+		<i class="glyphicon glyphicon-plus"></i>
+			<span>Click to select a file</span>
+		<input id="fileupload" type="file" name="uploadfile">
+	</span>
+	<div class="progress progress-striped" id="upload-progress">
+	  	<div class="progress-bar progress-bar-success" id="upload-bar" 
+	  		role="progressbar" aria-valuemin="0" aria-valuemax="100">
+	  	</div>
+	</div>
+	<button type="button" class="btn btn-primary has-spinner" id="upload-btn" disabled>
+		<span class="spinner"><i class="icon-spin icon-spinner"></i>
+		</span>
+		<i class="icon-upload-alt"> Upload and scan file</i>
+	</button>
+	<div id="upload-info"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="alert alert-info" id="bottom-info">
+	温馨提示：请使用Chrome或者Firefox浏览器，会获得更好的显示效果哦！
+	</div>
+</div>

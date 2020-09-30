@@ -1,0 +1,44 @@
+<div class="tab-pane active" id="home">
+	<div class="container" id="project-intro">
+		<p class="lead"><a href="#"> IIEGuard</a> - 自动化Android软件分析系统。</p>
+		<p class="lead"> 通过上传页面上传需要分析的样本，PassMark会对该样本应用静态和动态分析技术并生成可视化分析报告。 </p>
+	 
+		<h3> 静态分析:</h3>
+		<ul>
+			<li> 基本信息提取：Android软件的文件大小、MD5 Hash、包名、所使用的SDK版本等；</li>
+			<li> 类别分析：基于权限信息应用贝叶斯网络、朴素贝叶斯等算法进行自动化类别分类；</li>
+			<li> 权限分析：解析Android软件中申请的权限信息并给出对应权限的威胁度；</li>
+			<li> 组件分析：提取Android软件中使用的组件信息并分析已暴露(不安全)的组件；</li>
+			<li> 开发者信息提取：解析Android软件开发者信息，包括签名Hash、国家、公司等信息；</li>
+			<li> 代码特征分析：在Dalvik Bytecode级别分析代码中是否使用了Native、动态加载、反射、加密等特征；</li>
+			<li> 广告模块分析：分析Android软件中使用的广告模块；</li>
+			<li> 网络地址提取：挖掘Android软件中使用的网络地址信息；</li>
+			<li> 敏感API分析：挖掘Android软件中使用的高危敏感API信息；</li>
+			<li> API调用图：生成API调用图并提供gexf文件下载。</li>
+		</ul>
+		
+		<h3> 动态分析: </h3>
+		<ul>
+			<li> 网络数据流记录：记录软件运行过程中生成的网络数据流并提供pcap文件下载；</li>
+			<li> 文件读写监控：监控文件读写行为，同时获取读写数据及相关路径信息；</li>
+			<li> 网络操作监控：监控网络相关操作行为，同时获取网络流数据及网络地址和端口信息；</li>
+			<li> 短信及电话监控：监控短信发送及电话拨打行为；</li>
+			<li> 加解密操作监控：监控软件运行时的加解密行为；</li>
+			<li> 服务启动监控：监控实时启动的服务信息；</li>
+			<li> 隐私泄漏跟踪：跟踪用户隐私敏感信息的泄漏。</li>
+		</ul>
+		
+		<h3>综合分析：</h3>
+		<ul>
+			<li> 威胁度分析：根据静态和动态分析结果计算Android软件的威胁度。</li>
+		</ul>
+		
+	</div>
+	
+	<br>
+	<br>
+	
+	<div class="alert alert-info" id="bottom-info">
+		使用Chrome或者Firefox浏览器可以获得更好的显示效果！
+	</div>
+</div>
